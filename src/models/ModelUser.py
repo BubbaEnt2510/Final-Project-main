@@ -8,18 +8,16 @@ class ModelUser():
     def login(cls, db, email, password):
         try:
             cursor = db.connection.cursor()
-            sql = "SELECT id, email, password, fullname FROM user WHERE email = %s"
-            cursor.execute(sql, (email,))
+            sql = "SELECT id, email, password, fullname FROM user WHERE email = '{}'".format(user, email)
+            cursor.execute(sql)
             row = cursor.fetchone()
             if row:
                 user = User(row[0], row[1], row[2], row[3])
-                if check_password_hash(user.password, password):
-                    return user
+                return user
             return None
         except Exception as ex:
             raise Exception(ex)
         
-
 
     @classmethod
     def register(cls, db, user):

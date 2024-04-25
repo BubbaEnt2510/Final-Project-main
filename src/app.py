@@ -34,7 +34,6 @@ def login():
     return render_template('auth/login.html')
 
 
-
 @app.route('/logout')
 def logout():
     logout_user()
@@ -76,6 +75,7 @@ def register_form():
 
 @app.route('/reset_password')
 def reset_request():
+   
     return render_template('auth/reset-password.html', Title='Reset Request')
 
 if __name__ == '__main__':
