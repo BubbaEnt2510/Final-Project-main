@@ -8,11 +8,10 @@
 
 {% block body %}
 
-<form  class="form-signin" action="/register" method="POST">
+<form class="form-signin" action="/register" method="POST">
     <br><br>
-    <img class="mb-4" src="Colocar url de la imagen de la pagina web" alt="" width="72" height="57">
+    
     {% with messages = get_flashed_messages() %}
-
     {% if messages %}
     <br>
     {% for message in messages %}
@@ -21,30 +20,37 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endfor %}
-
     {% endif %}
-
     {% endwith %}
-    <div class="form-container">
-        <h3>Register</h3>
-        <hr>
-        <div class="form-row">
-            <input class="controlsInput" type="text" name="name" id="name" placeholder="Name">
-            <input class="controlsInput" type="text" name="lastName" id="lastName" placeholder="Last Name">
+    <div id="contenedor-base">
+        <div id="contenedor2" class="contenedor">
+            <img class="mb-4" src="static\css\img\timeri.png" alt="" width="300" height="300">
         </div>
-        <input class="controlInputs" type="email" name="email" id="email" placeholder="Email">
-        <input class="controlsInput" type="password" name="password" id="password" placeholder="Password">
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> <label><p>I agree with <a href="#" class="link-terms">Terms and Conditions</a></p></label>
-            </label>
+        <div id="contenedor1" class="contenedor">
+            <div class="form-container">
+                <h3>Register</h3>
+                <hr>
+                <div class="form-row">
+                    <input class="controlsInput" type="text" name="name" id="name" placeholder="Name">
+                    <input class="controlsInput" type="text" name="lastName" id="lastName" placeholder="Last Name">
+                </div>
+                <input class="controlsInput" type="email" name="email" id="email" placeholder="Email">
+                <input class="controlsInput" type="password" name="password" id="password" placeholder="Password">
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> <label><p>I agree with <a href="#" class="link-terms">Terms and Conditions</a></p></label>
+                    </label>
+                </div>
+                <button class="btn-submit" type="submit">Register</button>
+            </div>
+            <p class="mt-5 mb-3 text-muted">&copy; 2024–2050</p>
+
         </div>
-        <label class="linkLogin">
-            <a href="login">Sign in</a>
-        </label>
+        
+        
+        
     </div>
-        <button class="btn-submit" type="submit">Register</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2024–2050</p>
     
 </form>
+
 {% endblock %}

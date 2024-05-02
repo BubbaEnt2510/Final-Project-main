@@ -5,8 +5,63 @@
 <!-- Este bloque define el título de la página como "Inicio". -->
 
 {% block customCSS %}
-<!-- Link De CSS -->
-<linkrel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}"/>
+<!-- CSS -->
+<link href='/docs/dist/demo-to-codepen.css' rel='stylesheet' />
+<style>
+    body {
+        margin-top: 40px;
+        font-size: 14px;
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    }
+
+    #external-events {
+        float: left; /* Hacer que el contenedor de eventos externos flote a la izquierda */
+        width: 150px;
+        padding: 0 10px;
+        border: 1px solid #eee;
+        background: #eee;
+        text-align: left;
+    }
+
+    #external-events h4 {
+        font-size: 16px;
+        margin-top: 0;
+        padding-top: 1em;
+    }
+
+    #external-events .fc-event {
+        margin: 3px 0;
+        cursor: move;
+    }
+
+    #external-events p {
+        margin: 1.5em 0;
+        font-size: 11px;
+        color: #000000;
+    }
+
+    #external-events p input {
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    #calendar-wrap {
+        margin-left: 200px; /* Ajustar el margen izquierdo para dejar espacio para el contenedor de eventos externos */
+    }
+
+    #calendar {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    h4 {
+        color: black;
+    }
+
+    a {
+      text-decoration: none;
+    }
+</style>
 {% endblock %} 
 
 {% block body %}
@@ -45,12 +100,16 @@
 </header>
 <br>
 <main class="container">
-  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic">Blog </h1>
-      <p class="lead my-3">Informacion de la pagina</p>
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark d-flex justify-content-center align-items-center">
+    <div class="col-md-6 px-0 text-center">
+        <h1 class="display-4 fst-italic">TimeReminder</h1>
+        <h5 class="lead my-3">¿Quiénes Somos?</h5>
+        <p class="lead my-3">
+            Somos un equipo comprometido en proporcionarte las mejores herramientas para facilitar tu vida diaria. Con años de experiencia en desarrollo de software y diseño de interfaces muy adaptables al uso, hemos creado TimeReminder con el objetivo de ayudarte a optimizar tu tiempo, mejorar tus hábitos financieros y promover un estilo de vida saludable.
+        </p>
     </div>
-  </div>
+</div>
+
 
   <hr>
 
@@ -112,8 +171,39 @@
   <hr>
 
   <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
-      
+    <div id='wrap'>
+
+      <div id='external-events'>
+        <h4>Task</h4>
+  
+        <div id='external-events-list'>
+          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+            <div class='fc-event-main'>My Event 1</div>
+          </div>
+          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+            <div class='fc-event-main'>My Event 2</div>
+          </div>
+          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+            <div class='fc-event-main'>My Event 3</div>
+          </div>
+          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+            <div class='fc-event-main'>My Event 4</div>
+          </div>
+          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+            <div class='fc-event-main'>My Event 5</div>
+          </div>
+        </div>
+  
+        <p>
+          <input type='checkbox' id='drop-remove' />
+          <label for='drop-remove'>remove after drop</label>
+        </p>
+      </div>
+  
+      <div id='calendar-wrap'>
+        <div id='calendar'></div>
+      </div>
+  
     </div>
   </div>
 
@@ -153,5 +243,9 @@
   </footer>
 </div>
 
+
+<script>
+
+</script>
 
 {% endblock %}
