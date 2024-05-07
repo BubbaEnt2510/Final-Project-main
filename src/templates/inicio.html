@@ -61,6 +61,139 @@
     a {
       text-decoration: none;
     }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  :root {
+    --bg-color: #112031;
+    --card-bg: #395b64;
+    --text-color: #e7f6f2;
+    --imc-color: #a5c9ca;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alineación ajustada para comenzar desde la parte superior */
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 25px;
+    width: 50%; /* Cada tarjeta ocupa la mitad del ancho disponible */
+    margin: 0; /* Elimina el margen entre las tarjetas */
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .container h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+  }
+
+  .container .valuesArea * {
+    display: block;
+  }
+
+  .container .valuesArea label {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    margin: 5px 0;
+  }
+
+  .container .valuesArea input {
+    background: var(--text-color);
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  .container .actionsArea {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para mejor disposición */
+    align-items: center;
+    gap: 5px;
+  }
+
+  .container .actionsArea p {
+    width: 100%;
+    background: var(--imc-color);
+    color: var(--bg-color);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+
+  .container .actionsArea button.actionBtn {
+    text-align: center;
+    width: 150px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container .actionsArea button.actionBtn:hover,
+  .container .actionsArea button.actionBtn:focus {
+    background: var(--imc-color);
+    color: var(--bg-color);
+  }
+
+  .container table.classification {
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    border-collapse: collapse;
+    overflow: hidden;
+    margin-top: 20px; /* Espacio superior añadido para separar la tabla de la calculadora */
+  }
+
+  .container table.classification tr th,
+  .container table.classification tr td {
+    padding: 15px 5px;
+    border-bottom: 3px solid var(--imc-color);
+  }
+
+  .container table.classification thead {
+    background: var(--bg-color);
+  }
+
+  .container table.classification .trClass {
+    background: var(--card-bg);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media (max-width: 1050px) {
+    .wrapper {
+      margin: 15px 0;
+      flex-direction: column;
+    }
+
+
+
 </style>
 {% endblock %} 
 
@@ -211,6 +344,65 @@
 
   <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
+      <div class="wrapper">
+        <div class="card1">
+          <div class="container">
+            <h1>Calcule seu IMC</h1>
+            <div class="valuesArea">
+              <label for="peso">Peso:</label>
+              <input type="number" class="inputValues" id="peso" placeholder="Quilogramas" autocomplete="off" maxlength="3" required />
+            </div>
+            <div class="valuesArea">
+              <label for="altura">Altura:</label>
+              <input type="number" class="inputValues" id="altura" placeholder="Metros" step="0.01" autocomplete="off" required />
+            </div>
+            <div class="actionsArea">
+              <p>IMC: <span class="imcValue"></span></p>
+              <button class="actionBtn" id="calc" type="submit">Calcular</button>
+              <button class="actionBtn" id="reset" type="reset">Limpar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="container">
+            <h1>Tabla de Clasificación</h1>
+            <table class="classification">
+              <thead>
+                <tr>
+                  <th>IMC</th>
+                  <th>Classificación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="trClass">
+                  <td>Abaixo de 18,5</td>
+                  <td>Baixo Peso</td>
+                </tr>
+                <tr class="trClass">
+                  <td>Entre 18,6 e 24,9</td>
+                  <td>Peso Normal</td>
+                </tr>
+                <tr class="trClass">
+                  <td>Entre 25 e 29,9</td>
+                  <td>Sobrepeso</td>
+                </tr>
+                <tr class="trClass">
+                  <td>Entre 30 e 34,9</td>
+                  <td>Obesidade Grau I</td>
+                </tr>
+                <tr class="trClass">
+                  <td>Entre 35 e 39,9</td>
+                  <td>Obesidade Grau II</td>
+                </tr>
+                <tr class="trClass">
+                  <td>Acima de 40</td>
+                  <td>Obesidade Grau III</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
       
     </div>
   </div>
@@ -243,9 +435,66 @@
   </footer>
 </div>
 
+  
 
 <script>
+  let calcBtn = document.querySelector("button#calc");
+  const colors = {
+    font: "#e7f6f2",
+    bg: "#395b64",
+    chooseBg: "#a5c9ca",
+    chooseFont: "#112031",
+  };
+  calcBtn.onclick = function calcImc() {
+    let pesoValue = document.querySelector("#peso").value;
+    let alturaValue = document.querySelector("#altura").value;
+    let imcValue = document.querySelector(".imcValue");
+    let calcImc = pesoValue / alturaValue ** 2;
 
+    if (alturaValue == "" && pesoValue == "") {
+      alert("É necessário informar: \n > Peso \n > Altura");
+    } else if (alturaValue == "") {
+      alert("É necessário informar: \n > Altura");
+    } else if (pesoValue == "") {
+      alert("É necessário informar: \n > Peso");
+    } else {
+      imcValue.innerHTML = `${calcImc.toFixed(2)}`;
+      const trs = document.querySelectorAll(".trClass");
+      for (let i = 0; i < trs.length; i++) {
+        let chooseTr = {
+          tr1: trs[0],
+          tr2: trs[1],
+          tr3: trs[2],
+          tr4: trs[3],
+          tr5: trs[4],
+          tr6: trs[5],
+        };
+
+        if (calcImc <= 18.5) {
+          chooseTr.tr1.style.backgroundColor = colors.chooseBg;
+          chooseTr.tr1.style.color = colors.chooseFont;
+        } else if (calcImc >= 18.6 && calcImc <= 24.9) {
+          chooseTr.tr2.style.backgroundColor = colors.chooseBg;
+          chooseTr.tr2.style.color = colors.chooseFont;
+        }
+        // Aquí sigue el resto de la lógica para cambiar el color de las filas de la tabla según el IMC
+      }
+    }
+  };
+
+  let resetBtn = document.querySelector("button#reset");
+  resetBtn.onclick = function resetValue() {
+    let imcValue = document.querySelector(".imcValue");
+    const trs = document.querySelectorAll(".trClass");
+    for (let i = 0; i < trs.length; i++) {
+      let chooseTr = trs[i];
+      chooseTr.style.backgroundColor = colors.bg;
+      chooseTr.style.color = colors.font;
+    }
+    pesoValue = document.querySelector("#peso").value = "";
+    alturaValue = document.querySelector("#altura").value = "";
+    imcValue.innerHTML = "";
+  };
 </script>
 
 {% endblock %}
