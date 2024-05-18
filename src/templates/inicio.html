@@ -186,6 +186,254 @@
   }
 
 </style>
+
+<style>
+  body {
+  font-family: var(--font-family);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  background-image: var(--background-image);
+  background-size: cover;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.icon-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #090909b3;
+  border: 2px solid rgba(0, 0, 0, 0.67);
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.713);
+}
+
+.icon-button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  min-width: 400px;
+  max-width: 100%;
+  height: 30vh;
+  width: 50px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  backdrop-filter: blur(2px);
+  margin-top: 50px;
+  border-radius: 100px;
+}
+
+.name {
+  margin: 5px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Orbitron";
+  color: var(--text-color);
+  margin-top: 40px;
+}
+
+h1,
+p {
+  color: var(--text-color);
+  font-family: "Orbitron";
+}
+
+#timer {
+  min-width: 300px;
+  font-size: 5rem;
+  font-family: "Orbitron", monospace;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0;
+}
+
+#text {
+  color: #ff0000;
+}
+
+button {
+  font-family: "Orbitron";
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: #090909b3;
+  border: 2px solid rgba(0, 0, 0, 0.67);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #0000006a;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin: 15px 10px;
+  padding: 8px 30px;
+  cursor: pointer;
+}
+
+.cycle {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #ffffffba;
+  color: rgba(0, 0, 0, 0.777);
+  border: 2px solid black;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.713);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+#texttarea {
+  font-size: 1rem;
+  margin-right: 50px;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  top: 140px;
+  left: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  backdrop-filter: blur(2px);
+  border: 1px solid white;
+  height: 60%;
+  max-width: 40%;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+li::before {
+  content: "\2717";
+  margin-right: 10px;
+}
+
+li:hover {
+  background-color: #ff0000;
+  border-radius: 10px;
+  padding: 5px 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.butontarea {
+  font-family: "Orbitron";
+  padding: 2px 10px;
+  font-size: 1rem;
+}
+
+.icon {
+  animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+#configContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  height: 10%;
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  #container {
+    margin-top: 10px;
+  }
+  #configContainer {
+    height: 10%;
+  }
+  .container1 {
+    max-width: 100%;
+  }
+}
+input {
+  text-align: center;
+}
+
+li {
+  color: black;
+}
+li:hover {
+  color: white;
+}
+
+</style>
 {% endblock %} 
 
 {% block body %}
@@ -209,11 +457,11 @@
 
       <ul
         class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        <a href="#" class="nav-link px-2 text-secondary">Home</a>
+        <a href="#" class="nav-link px-2 text-white">Features</a>
+        <a href="#" class="nav-link px-2 text-white">Pricing</a>
+        <a href="#" class="nav-link px-2 text-white">FAQs</a>
+        <a href="#" class="nav-link px-2 text-white">About</a>
       </ul>
 
       <div class="text-end">
@@ -299,7 +547,14 @@
 
       <div id='external-events'>
         <h4>Task</h4>
-  
+        
+        <div class="container1">
+          <h1 id="texttarea">Lista de Tareas</h1>
+          <input type="text" id="taskInput" placeholder="Agregar una nueva tarea">
+          <button class="butontarea" onclick="addTask()">Agregar Tarea </button>
+          <ul id="taskList"></ul>
+        </div>
+        
         <div id='external-events-list'>
           <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
             <div class='fc-event-main'>My Event 1</div>
@@ -399,7 +654,30 @@
 
   <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
-      
+      <h1 class="name">Cronómetro Pomodoro</h1>
+    <div id="container">
+        <h1 id="text">¡Enfocado!</h1>
+        <div class="timer_circle">
+            <div id="timer"></div>
+        </div>
+        <div class="buttons">
+            <button id="StartButton">Iniciar</button>
+        </div>
+    </div>
+
+    <div id="configContainer" style="display: none;">
+        <h2>Configuración del cronómetro</h2>
+        <label for="workTime">Tiempo de trabajo (Minutos):</label>
+        <input type="number" id="workTime" value="10">
+        <br>
+        <label for="breakTime">Tiempo de pausa (Minutos):</label>
+        <input type="number" id="breakTime" value="5">
+        <br>
+        <button id="SaveConfigButton" onclick="saveConfig()">Guardar</button>
+    </div>
+    </div>
+    <div class="cycle">
+      <p id="cycleCountDisplay"></p>
     </div>
   </div>
 </main>
@@ -495,6 +773,155 @@
     alturaValue = document.querySelector("#altura").value = "";
     imcValue.innerHTML = "";
   };
+</script>
+
+<script>
+  const StartButton = document.getElementById("StartButton");
+const text = document.getElementById("text");
+const cycleCountDisplay = document.getElementById("cycleCountDisplay"); // Elemento para mostrar el ciclo actual
+
+//agrego el evento al boton
+StartButton.addEventListener("click", startTimer);
+//VARIABLES
+let timer;
+let time = 1 * 10;
+let isWorking = true;
+let isRunning = false;
+let cycleCount = 0; // Variable para contar los ciclos del temporizador
+
+function updateTimerDisplay() {
+  //ACTUALIZAR EL TIEMPO
+  const minutes = Math.floor(time / 60); //CALCULAR LOS MINUTOS RESTANTES
+  const seconds = time % 60; //CALCULAR LOS SEGUNDOS RESTANTES
+  document.getElementById("timer").textContent = `${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`; // PARA ACUTUALIZAR LOS NUMEROES EN VEZ DE 5 SERIA 05
+}
+
+function updateCycleCountDisplay() {
+  cycleCountDisplay.textContent = `Ciclo: ${cycleCount}`;
+  cycleCountDisplay.style.color = "white";
+}
+
+//funcion para iniciar el cronometro
+function startTimer() {
+  if (!isRunning) {
+    isRunning = true;
+    timer = setInterval(() => {
+      if (time > 0) {
+        time--;
+        updateTimerDisplay();
+      } else {
+        clearInterval(timer);
+        isRunning = false;
+        cycleCount++; // Incrementar el contador de ciclos
+        updateCycleCountDisplay(); // Actualizar la visualización del ciclo actual
+        //alert(isWorking ? "Tomate un descanso" : "Es tiempo de trabajar"); //quitar esta linea si no soluciono la demora del sonido
+        if (isWorking) {
+          time = 1 * 5; //DESCANSO
+          isWorking = false;
+          text.textContent = "¡Descanso!";
+          text.style.color = "#006600";
+          playSound();
+        } else {
+          time = 1 * 10; //TRABAJO
+          isWorking = true;
+          text.textContent = "¡Enfocado!";
+          text.style.color = "#ff0000";
+          playSound();
+        }
+        updateTimerDisplay();
+        StartButton.textContent = "Iniciar";
+
+        if (cycleCount === 7) {
+          time = 1 * 20;
+          cycleCount = -1; // Reiniciar el contador de ciclos
+          text.textContent = "Es hora del descanso largo";
+          text.style.fontSize = "1.2rem";
+          text.style.color = "#006600";
+
+          updateTimerDisplay();
+          playSound();
+        }
+      }
+    }, 1000);
+    StartButton.textContent = "Reiniciar";
+  } else {
+    clearInterval(timer);
+    time = isWorking ? 1 * 10 : 1 * 5; // Reinicia el tiempo según el estado actual (trabajo o descanso)
+    updateTimerDisplay();
+    isRunning = false;
+    StartButton.textContent = "Iniciar";
+  }
+}
+
+//funcion para sonido
+function playSound() {
+  const audio = new Audio(
+    "Utilidades/iphoneradar_bd8398fb5078630 (mp3cut.net).mp3"
+  );
+  audio.play();
+}
+
+updateTimerDisplay(); //actualizar la visualización del temporizador
+updateCycleCountDisplay(); // Actualizar la visualización del ciclo actual
+
+function addTask() {
+  let input = document.getElementById("taskInput").value.trim();
+  let maxLength = 30;
+
+  if (input.length > maxLength) {
+    input = input.substring(0, maxLength);
+  }
+
+  let ul = document.getElementById("taskList");
+
+  // Verificar si ya hay 8 tareas en la lista
+  if (ul.children.length >= 8) {
+    alert("¡Ya has agregado el máximo de 8 tareas!");
+    return;
+  }
+
+  if (input === "") {
+    alert("Por favor ingresa una tarea.");
+    return;
+  }
+
+  let li = document.createElement("li");
+  li.appendChild(document.createTextNode(input));
+  ul.appendChild(li);
+  document.getElementById("taskInput").value = "";
+
+  // Agregar función para eliminar tarea al hacer clic en ella
+  li.onclick = function () {
+    this.parentNode.removeChild(this);
+  };
+}
+
+// Funcion del boton
+function toggleConfig() {
+  let configContainer = document.getElementById("configContainer");
+  configContainer.style.display =
+    configContainer.style.display === "none" ? "block" : "none";
+}
+function closeConfig() {
+  let configContainer = document.getElementById("configContainer");
+  configContainer.style.display = "none";
+}
+
+function saveConfig() {
+  let workTimeInput = document.getElementById("workTime");
+  let breakTimeInput = document.getElementById("breakTime");
+  if (isWorking) {
+    time = workTimeInput.value * 60;
+  } else {
+    time = breakTimeInput.value * 60;
+  }
+  alert("Configuración guardada");
+  updateTimerDisplay();
+  closeConfig();
+}
+
 </script>
 
 {% endblock %}
