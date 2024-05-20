@@ -1,0 +1,87 @@
+/* Estilos generales */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #25324a, #3b4861);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el contenedor base */
+.contenedor-base {
+    display: flex;
+    width: 90%;
+    height: 80vh;
+    justify-content: center; /* Cambia space-around a center */
+    align-items: center;
+}
+
+/* Estilos para los contenedores */
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 80%;
+    width: 48%;
+    margin: 0; /* Asegura que no haya margen entre los contenedores */
+}
+
+/* Estilos para el contenedor 2 */
+#contenedor2 {
+    background: linear-gradient(to right, #7b8cd7, #94a4e4);
+    padding: 280px; /* Reduce el padding */
+    margin-right: 0; /* Asegura que no haya margen a la derecha */
+}
+
+/* Estilos para el contenedor 1 */
+.contenedor1 {
+    background: linear-gradient(to right, #0c0730, #0e154a);
+    padding: 280px; /* Reduce el padding */
+    margin-left: 0; /* Asegura que no haya margen a la izquierda */
+}
+
+/* Estilos para el contenedor de formulario */
+.form-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el input de control */
+.form-control {
+  padding: 10px;
+  border-radius: 5px;
+  width: 169%; /* Ajusta el ancho al 100% */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  margin-left: -40px; /* Mueve el input ligeramente a la izquierda */
+}
+
+/* Estilos para el botón de envío */
+.btn-primary {
+    background-color: #7b8cd7;
+    padding: 2%; /* Aumenta el padding para ancho adicional */
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+    width: 100%; /* Ajusta el ancho al 100% */
+}
+
+/* Estilos para el texto con color atenuado */
+.text-muted {
+    margin-top: 30px;
+}

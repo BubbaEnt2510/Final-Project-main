@@ -1,13 +1,13 @@
+/* Estilos generales */
 html,
 body {
-
     position: relative;
     padding: 10px;
     margin: 10px; /* Añade un margen al cuerpo */
-    background: linear-gradient(to right, #25324a,#3b4861);
-    
+    background: linear-gradient(to right, #25324a, #3b4861);
 }
 
+/* Estilos para el botón de envío */
 .btn-submit {
     background-color: #7b8cd7;
     padding: 7px 35px;
@@ -16,12 +16,14 @@ body {
     box-shadow: 0 5px 10px;
 }
 
+/* Estilos para el contenedor base */
 #contenedor-base {
     position: relative;
     width: calc(100% - 20px); /* Ajusta el ancho del contenedor base para dejar espacio en los lados */
     height: 80vh; /* Ajusta la altura del contenedor base */
 }
 
+/* Estilos para los contenedores */
 .contenedor {
     position: absolute;
     top: 10%; /* Baja los contenedores */
@@ -30,23 +32,25 @@ body {
     box-shadow: 0 5px 10px;
 }
 
+/* Estilos para el contenedor 2 */
 #contenedor2 {
     left: 5%; /* Cambia la posición izquierda para dejar espacio en el lado izquierdo */
     width: 45%; /* Ajusta el ancho del contenedor */
     height: 80%; /* Ajusta la altura del contenedor */
     background-color: #ff0000;
     padding: 80px;
-    background: linear-gradient(to right, #7b8cd7,#94a4e4);
+    background: linear-gradient(to right, #7b8cd7, #94a4e4);
 }
 
+/* Estilos para el contenedor 1 */
 #contenedor1 {
     right: 5%; /* Cambia la posición derecha para dejar espacio en el lado derecho */
     width: 45%; /* Ajusta el ancho del contenedor */
     height: 80%; /* Ajusta la altura del contenedor */
     background-color: #001aff;
     padding: 80px;
-    background: linear-gradient(to right,#0c0730,#0e154a );
-    }
+    background: linear-gradient(to right, #0c0730, #0e154a);
+}
 
 /* Ajustes para los inputs */
 input[type="email"],
@@ -57,11 +61,8 @@ input[type="password"] {
     margin-bottom: 10px; /* Ajusta el margen inferior */
 }
 
-h4 {
-   color: #ffff;
-}
-
-#recuerdame{
+/* Estilos para los elementos de texto */
+h4,
+#recuerdame {
     color: #ffff;
 }
-

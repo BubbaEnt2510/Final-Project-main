@@ -184,6 +184,307 @@
       flex-direction: column;
     }
   }
+  .container1 {
+    margin-left: -920px; /* Ajusta el valor para moverlo más o menos a la izquierda */
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px; /* Espacio alrededor del contenedor */
+}
+#texttarea {
+            color: #ecf0f1;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* Estilos para el input de tareas */
+        #taskInput {
+            width: calc(100% - 22px); /* Ajuste de ancho para el padding */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para el botón de agregar tarea */
+        .butontarea {
+            width: 100%;
+            padding: 10px;
+            --card-bg: #395b64;
+            background-color: #0000006a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+
+        .butontarea:hover {
+            background-color: #a5c9ca;
+            border: none;
+        }
+
+        /* Estilos para la lista de tareas */
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        #taskList li {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #taskList li button {
+            background: none;
+            border: none;
+            color: #e74c3c;
+            cursor: pointer;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        #taskList li button:hover {
+            color: #c0392b;
+        }
+
+        .btn-cerrar-sesion {
+          font-family: "Orbitron";
+          padding: 10px 20px;
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          color: #000000;
+          background-color: #a5c9ca;
+          border-radius: 10px;
+          box-shadow: 0px 5px 10px #0000006a;
+          transition: all 0.3s ease;
+          font-size: 1rem;
+          margin: 15px 10px;
+          padding: 8px 30px;
+          cursor: pointer;
+          
+        }
+
+        .btn-cerrar-sesion:hover {
+          background-color: #112031;
+          color: rgb(255, 255, 255);
+          border: 2px solid black;
+          box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.713);
+          text-decoration: none;
+        }
+
+    #configContainer {
+  display: flex;
+   margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  height: 10%;
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+}
+h2 {
+  font-size: 1.2rem;
+}
+#timer {
+  min-width: 300px;
+  font-size: 5rem;
+  font-family: "Orbitron", monospace;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0;
+}
+.butontarea {
+  font-family: "Orbitron";
+  padding: 2px 10px;
+  font-size: 1rem;
+}
+.icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+button:hover {
+  background-color: #ffffffba;
+  color: rgba(0, 0, 0, 0.777);
+  border: 2px solid black;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.713);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+button {
+  font-family: "Orbitron";
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: #090909b3;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #0000006a;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin: 15px 10px;
+  padding: 8px 30px;
+  cursor: pointer;
+}
+.icon-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #090909b3;
+  border: 2px solid rgba(0, 0, 0, 0.67);
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.713);
+}
+
+.icon-button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #container {
+    margin-top: 10px;
+  }
+  #configContainer {
+    height: 10%;
+  }
+  .container1 {
+    max-width: 100%;
+  }
+}
+input {
+  text-align: center;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#text {
+  color: #ff0000;
+}
+
+#contenedorpomodoro {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+
+}
+
+.containerfooter {
+  background-color: rgb(33 37 41);
+  padding: 20px; /* Espaciado interno */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+}
+
+footer div svg {
+  width: 30px; /* Ancho del icono */
+  height: auto; /* Altura automática */
+  fill: #6c757d; /* Color del icono */
+  margin-right: 10px; /* Espacio a la derecha del icono */
+}
+
+footer div span {
+  color: #6c757d; /* Color del texto */
+}
+
+footer ul {
+  list-style: none; /* Eliminar viñetas */
+  padding: 0; /* Eliminar relleno */
+  margin: 0; /* Eliminar márgenes */
+}
+
+footer ul li {
+  display: inline-block; /* Mostrar elementos en línea */
+  margin-left: 10px; /* Espacio entre elementos */
+}
+
+footer ul li:first-child {
+  margin-left: 0; /* Eliminar margen izquierdo del primer elemento */
+}
+
+footer ul li a {
+  color: #6c757d; /* Color del enlace */
+}
+
+footer ul li a:hover {
+  color: #007bff; /* Color del enlace al pasar el mouse */
+}
+
+/* Ajustes para iconos SVG */
+footer ul li svg {
+  width: 24px; /* Ancho del icono */
+  height: 24px; /* Altura del icono */
+}
+
+.bi {
+  height: 30px;
+  width: 30px;
+}
+
+.bi-logo {
+  height: 80px;
+  width: 80px;
+}
+
 
 </style>
 {% endblock %} 
@@ -203,21 +504,18 @@
       class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
         <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap" >
-          <use xlink:href="#bootstrap" />
+          <img class="bi-logo" src=".\static\css\img\logo-original.jpeg" alt="">
         </svg>
       </a>
 
       <ul
         class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        <li><a href="#" class="nav-link px-2 text-secondary">Inicio</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">Contactenos</a></li>
       </ul>
 
       <div class="text-end">
-        <a class="btn btn-warning" href="{{ url_for('logout') }}">Logout</a>
+        <a class="btn-cerrar-sesion" href="{{ url_for('logout') }}">Cerrar sesion</a>
       </div>
     </div>
   </div>
@@ -234,101 +532,37 @@
     </div>
 </div>
 
-
-  <hr>
-
-  <div id="carouselContainer" class="container">
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-          <div class="container">
-            <div class="carousel-video text-center">
-              <!-- Implementar video explicativo para las funciones de la pagina -->
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-          <div class="container">
-            <div class="carousel-video">
-              <!-- Implementar video explicativo para las funciones de la pagina -->
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-          <div class="container">
-            <div class="carousel-video text-center">
-              <!-- Implementar video explicativo para las funciones de la pagina -->
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-          <div class="container">
-            <div class="carousel-video text-center">
-              <!-- Implementar video explicativo para las funciones de la pagina -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-  
-
-
   <hr>
 
   <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-    <div id='wrap'>
+  
+    <div id='wrap1'>
+      <div class="container1">
+          <h1 id="texttarea">Lista de Tareas</h1>
+          <input type="text" id="taskInput" placeholder="Agregar una nueva tarea">
+          <button class="butontarea" onclick="addTask()">Agregar Tarea </button>
+          <ul id="taskList" style="display: none;"></ul>
+      </div>
+  </div>
 
+  <br><br>
+  
+  <div id='wrap'>
       <div id='external-events'>
-        <h4>Task</h4>
-  
-        <div id='external-events-list'>
-          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-            <div class='fc-event-main'>My Event 1</div>
+          <h4>Task</h4>
+          <div id='external-events-list'>
+              <!-- Aquí se añadirán automáticamente las tareas -->
           </div>
-          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-            <div class='fc-event-main'>My Event 2</div>
-          </div>
-          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-            <div class='fc-event-main'>My Event 3</div>
-          </div>
-          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-            <div class='fc-event-main'>My Event 4</div>
-          </div>
-          <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
-            <div class='fc-event-main'>My Event 5</div>
-          </div>
-        </div>
-  
-        <p>
-          <input type='checkbox' id='drop-remove' />
-          <label for='drop-remove'>remove after drop</label>
-        </p>
+          <p>
+              <input type='checkbox' id='drop-remove' checked style="display:none;" />
+              <label for='drop-remove' style="display:none;">remove after drop</label>
+          </p>
       </div>
-  
       <div id='calendar-wrap'>
-        <div id='calendar'></div>
+          <div id='calendar'></div>
       </div>
-  
-    </div>
+  </div>  
+
   </div>
 
   <hr>
@@ -337,7 +571,7 @@
       <div class="wrapper">
         <div class="card1">
           <div class="container">
-            <h1>Calculating the Imc</h1>
+            <h1>Calcular IMC</h1>
             <div class="valuesArea">
               <label for="peso">Peso:</label>
               <input type="number" class="inputValues" id="peso" placeholder="Kilogramos" autocomplete="off" maxlength="3" required />
@@ -348,45 +582,45 @@
             </div>
             <div class="actionsArea">
               <p>IMC: <span class="imcValue"></span></p>
-              <button class="actionBtn" id="calc" type="submit">Calculate </button>
-              <button class="actionBtn" id="reset" type="reset">Clean</button>
+              <button class="actionBtn" id="calc" type="submit">Calcular </button>
+              <button class="actionBtn" id="reset" type="reset">Borrar</button>
             </div>
           </div>
         </div>
         <div class="card1">
           <div class="container">
-            <h1>Classification Table</h1>
+            <h1>Tabla de clasificacion</h1>
             <table class="classification">
               <thead>
                 <tr>
                   <th>IMC</th>
-                  <th>Classificación</th>
+                  <th>Clasificacion</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="trClass">
-                  <td>Below de 18,5</td>
-                  <td>Low weight</td>
+                  <td>Por debajo de 18,5</td>
+                  <td>Bajo peso</td>
                 </tr>
                 <tr class="trClass">
-                  <td>Between 18.6 and 24.9</td>
-                  <td>Normal Weight</td>
+                  <td>Entre 18.6 y 24.9</td>
+                  <td>Peso normal</td>
                 </tr>
                 <tr class="trClass">
-                  <td>Between 25 and 29.9</td>
-                  <td>Overweight</td>
+                  <td>Entre 25 y 29.9</td>
+                  <td>Sobrepeso</td>
                 </tr>
                 <tr class="trClass">
-                  <td>Between 30 and 34.9</td>
-                  <td>Grade I obesity</td>
+                  <td>Entre 30 y 34.9</td>
+                  <td>Grado I de obesidad</td>
                 </tr>
                 <tr class="trClass">
-                  <td>Between 35 and 39.9</td>
-                  <td>Grade II obesity</td>
+                  <td>Entre 35 y 39.9</td>
+                  <td>Grado II de obesidad</td>
                 </tr>
                 <tr class="trClass">
-                  <td>Over 40</td>
-                  <td>Grade III obesity</td>
+                  <td>Sobre 40</td>
+                  <td>Grade III de obesidad</td>
                 </tr>
               </tbody>
             </table>
@@ -397,28 +631,57 @@
 
   <hr>
 
-  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
-      
+ 
+  <div id="contenido" class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div id="contenedorpomodoro" >
+      <div class="col-md-6 px-0">
+        <h1 class="name">Cronómetro Pomodoro</h1>
+      <div id="container">
+          <h1 id="text">¡Enfocado!</h1>
+          <div class="timer_circle">
+              <div id="timer"></div>
+          </div>
+          <div class="buttons">
+              <button id="StartButton">Iniciar</button>
+          </div>
+      </div>
+  
+      <div id="configContainer" style="display: none;">
+          <h2>Configuración del cronómetro</h2>
+          <label for="workTime">Tiempo de trabajo (Minutos):</label>
+          <input type="number" id="workTime" value="10">
+          <br>
+          <label for="breakTime">Tiempo de pausa (Minutos):</label>
+          <input type="number" id="breakTime" value="5">
+          <br>
+          <button id="SaveConfigButton" onclick="saveConfig()">Guardar</button>
+      </div>
+  
+      <div class="cycle">
+          <p id="cycleCountDisplay"></p>
+      </div>
+      </div>
     </div>
+    
   </div>
 </main>
 
 <div class="b-example-divider"></div>
 
-<div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+<div class="containerfooter">
+  <footer>
+    <div>
+      <a href="/">
+        <svg></svg>
       </a>
       <span class="text-muted">&copy; 2021 Company, Inc</span>
     </div>
+    
 
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    <ul >
+      <li class="ms-3"><a class="text-muted" href="https://x.com/?lang=es"><svg class="bi"><use xlink:href="#twitter"/><img class="bi" src=".\static\css\img\gorjeo.png" alt=""></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F&hl=es-es&aa_click=8891933284028179"><svg class="bi"><use xlink:href="#instagram"/><img class="bi" src=".\static\css\img\instagram.png" alt=""></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/login/device-based/regular/login/?login_attempt=1"><svg class="bi"><img class="bi" src=".\static\css\img\facebook.png" alt=""><use xlink:href="#facebook"/></svg></a></li>
     </ul>
   </footer>
 </div>
@@ -496,5 +759,169 @@
     imcValue.innerHTML = "";
   };
 </script>
+
+<script>
+  const StartButton = document.getElementById("StartButton");
+const text = document.getElementById("text");
+const cycleCountDisplay = document.getElementById("cycleCountDisplay"); // Elemento para mostrar el ciclo actual
+
+//agrego el evento al boton
+StartButton.addEventListener("click", startTimer);
+//VARIABLES
+let timer;
+let time = 1 * 10;
+let isWorking = true;
+let isRunning = false;
+let cycleCount = 0; // Variable para contar los ciclos del temporizador
+
+function updateTimerDisplay() {
+  //ACTUALIZAR EL TIEMPO
+  const minutes = Math.floor(time / 60); //CALCULAR LOS MINUTOS RESTANTES
+  const seconds = time % 60; //CALCULAR LOS SEGUNDOS RESTANTES
+  document.getElementById("timer").textContent = `${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`; // PARA ACUTUALIZAR LOS NUMEROES EN VEZ DE 5 SERIA 05
+}
+
+function updateCycleCountDisplay() {
+  cycleCountDisplay.textContent = `Ciclo: ${cycleCount}`;
+  cycleCountDisplay.style.color = "white";
+}
+
+//funcion para iniciar el cronometro
+function startTimer() {
+  if (!isRunning) {
+    isRunning = true;
+    timer = setInterval(() => {
+      if (time > 0) {
+        time--;
+        updateTimerDisplay();
+      } else {
+        clearInterval(timer);
+        isRunning = false;
+        cycleCount++; // Incrementar el contador de ciclos
+        updateCycleCountDisplay(); // Actualizar la visualización del ciclo actual
+        //alert(isWorking ? "Tomate un descanso" : "Es tiempo de trabajar"); //quitar esta linea si no soluciono la demora del sonido
+        if (isWorking) {
+          time = 1 * 5; //DESCANSO
+          isWorking = false;
+          text.textContent = "¡Descanso!";
+          text.style.color = "#006600";
+          playSound();
+        } else {
+          time = 1 * 10; //TRABAJO
+          isWorking = true;
+          text.textContent = "¡Enfocado!";
+          text.style.color = "#ff0000";
+          playSound();
+        }
+        updateTimerDisplay();
+        StartButton.textContent = "Iniciar";
+
+        if (cycleCount === 7) {
+          time = 1 * 20;
+          cycleCount = -1; // Reiniciar el contador de ciclos
+          text.textContent = "Es hora del descanso largo";
+          text.style.fontSize = "1.2rem";
+          text.style.color = "#006600";
+
+          updateTimerDisplay();
+          playSound();
+        }
+      }
+    }, 1000);
+    StartButton.textContent = "Reiniciar";
+  } else {
+    clearInterval(timer);
+    time = isWorking ? 1 * 10 : 1 * 5; // Reinicia el tiempo según el estado actual (trabajo o descanso)
+    updateTimerDisplay();
+    isRunning = false;
+    StartButton.textContent = "Iniciar";
+  }
+}
+
+//funcion para sonido
+function playSound() {
+  let audio = new Audio('./static/5-de-la-manana.mp3');
+  audio.play();
+}
+
+updateTimerDisplay(); //actualizar la visualización del temporizador
+updateCycleCountDisplay(); // Actualizar la visualización del ciclo actual
+
+function addTask() {
+    let input = document.getElementById("taskInput").value.trim();
+    let maxLength = 30;
+
+    if (input.length > maxLength) {
+        input = input.substring(0, maxLength);
+    }
+
+    let ul = document.getElementById("taskList");
+
+    // Verificar si ya hay 8 tareas en la lista
+    if (ul.children.length >= 8) {
+        alert("¡Ya has agregado el máximo de 8 tareas!");
+        return;
+    }
+
+    if (input === "") {
+        alert("Por favor ingresa una tarea.");
+        return;
+    }
+
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(input));
+    ul.appendChild(li);
+    document.getElementById("taskInput").value = "";
+
+    // Agregar la tarea al div de eventos externos
+    let eventDiv = document.createElement("div");
+    eventDiv.className = 'fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event';
+    let eventContent = document.createElement("div");
+    eventContent.className = 'fc-event-main';
+    eventContent.innerText = input;
+    eventDiv.appendChild(eventContent);
+    document.getElementById('external-events-list').appendChild(eventDiv);
+
+    // Hacer que el nuevo evento sea arrastrable
+    new FullCalendar.Draggable(eventDiv, {
+        eventData: {
+            title: input
+        }
+    });
+
+    // Agregar función para eliminar tarea al hacer clic en ella
+    li.onclick = function () {
+        this.parentNode.removeChild(this);
+    };
+}
+
+// Funcion del boton
+function toggleConfig() {
+  let configContainer = document.getElementById("configContainer");
+  configContainer.style.display =
+    configContainer.style.display === "none" ? "block" : "none";
+}
+function closeConfig() {
+  let configContainer = document.getElementById("configContainer");
+  configContainer.style.display = "none";
+}
+
+function saveConfig() {
+  let workTimeInput = document.getElementById("workTime");
+  let breakTimeInput = document.getElementById("breakTime");
+  if (isWorking) {
+    time = workTimeInput.value * 60;
+  } else {
+    time = breakTimeInput.value * 60;
+  }
+  alert("Configuración guardada");
+  updateTimerDisplay();
+  closeConfig();
+}
+
+</script>
+
 
 {% endblock %}
