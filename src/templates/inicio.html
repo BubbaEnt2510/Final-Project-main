@@ -487,6 +487,254 @@ footer ul li svg {
 
 
 </style>
+
+<style>
+  body {
+  font-family: var(--font-family);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+  background-image: var(--background-image);
+  background-size: cover;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.icon-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #090909b3;
+  border: 2px solid rgba(0, 0, 0, 0.67);
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover {
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.713);
+}
+
+.icon-button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  min-width: 400px;
+  max-width: 100%;
+  height: 30vh;
+  width: 50px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  backdrop-filter: blur(2px);
+  margin-top: 50px;
+  border-radius: 100px;
+}
+
+.name {
+  margin: 5px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Orbitron";
+  color: var(--text-color);
+  margin-top: 40px;
+}
+
+h1,
+p {
+  color: var(--text-color);
+  font-family: "Orbitron";
+}
+
+#timer {
+  min-width: 300px;
+  font-size: 5rem;
+  font-family: "Orbitron", monospace;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0;
+}
+
+#text {
+  color: #ff0000;
+}
+
+button {
+  font-family: "Orbitron";
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: #090909b3;
+  border: 2px solid rgba(0, 0, 0, 0.67);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #0000006a;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  margin: 15px 10px;
+  padding: 8px 30px;
+  cursor: pointer;
+}
+
+.cycle {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #ffffffba;
+  color: rgba(0, 0, 0, 0.777);
+  border: 2px solid black;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.713);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+#texttarea {
+  font-size: 1rem;
+  margin-right: 50px;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  top: 140px;
+  left: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  backdrop-filter: blur(2px);
+  border: 1px solid white;
+  height: 60%;
+  max-width: 40%;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+li::before {
+  content: "\2717";
+  margin-right: 10px;
+}
+
+li:hover {
+  background-color: #ff0000;
+  border-radius: 10px;
+  padding: 5px 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.butontarea {
+  font-family: "Orbitron";
+  padding: 2px 10px;
+  font-size: 1rem;
+}
+
+.icon {
+  animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+#configContainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 20%;
+  height: 10%;
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  #container {
+    margin-top: 10px;
+  }
+  #configContainer {
+    height: 10%;
+  }
+  .container1 {
+    max-width: 100%;
+  }
+}
+input {
+  text-align: center;
+}
+
+li {
+  color: black;
+}
+li:hover {
+  color: white;
+}
+
+</style>
 {% endblock %} 
 
 {% block body %}
@@ -573,11 +821,11 @@ footer ul li svg {
           <div class="container">
             <h1>Calcular IMC</h1>
             <div class="valuesArea">
-              <label for="peso">Peso:</label>
+              <label for="peso">Weight:</label>
               <input type="number" class="inputValues" id="peso" placeholder="Kilogramos" autocomplete="off" maxlength="3" required />
             </div>
             <div class="valuesArea">
-              <label for="altura">Altura:</label>
+              <label for="altura">Height:</label>
               <input type="number" class="inputValues" id="altura" placeholder="Metros" step="0.01" autocomplete="off" required />
             </div>
             <div class="actionsArea">
